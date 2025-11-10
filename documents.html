@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Liệu Khác - Chủ tịch Hồ Chí Minh</title>
+    <meta name="description" content="Sách, bài hát và video về Chủ tịch Hồ Chí Minh">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 0 0'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="common.js" defer></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Fix navigation duplicate */
+        header nav.hidden {
+            display: none !important;
+        }
+        @media (min-width: 768px) {
+            header nav.hidden {
+                display: flex !important;
+            }
+        }
+        @media (max-width: 767px) {
+            header nav.hidden {
+                display: none !important;
+            }
+        }
+        #mobile-menu {
+            display: none !important;
+        }
+        @media (max-width: 767px) {
+            #mobile-menu.hidden {
+                display: none !important;
+            }
+            #mobile-menu:not(.hidden) {
+                display: block !important;
+            }
+        }
+        /* Fix navigation links font-weight */
+        header nav a {
+            font-weight: normal !important;
+        }
+        
+        #mobile-menu a {
+            font-weight: normal !important;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/HCM/TutuongHCM.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .audio-player {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: white;
+        }
+        
+        .book-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                Hồ Chí Minh
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                <a href="documents.html" class="text-yellow-300 border-b-2 border-yellow-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>
+            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[40vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl leading-tight mb-4">Tài Liệu Khác</h1>
+                <p class="text-lg md:text-2xl italic">Sách, bài hát và video về Chủ tịch Hồ Chí Minh</p>
+            </div>
+        </section>
+
+        <!-- Sách Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-[#c8102e]">Sách Về Chủ Tịch Hồ Chí Minh</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="book-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#c8102e]">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-[#c8102e] mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#c8102e]">	Chủ tịch Hồ Chí Minh - nhà văn hoá kiệt xuất của Việt Nam</h3>
+                        <p class="text-gray-600 mb-2">Biên soạn: <strong>	Nguyễn Thị Thu Hằng</strong></p>
+                        <p class="text-gray-600 mb-4">Những đóng góp của Chủ tịch Hồ Chí Minh đối với sự nghiệp văn hoá, quan điểm của Người về vai trò và nhiệm vụ của văn hoá</p>
+                        <a href="assets/download/BTC215.pdf" download="BTC215.pdf" class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Tải xuống PDF
+                        </a>
+                    </div>
+
+                    <!-- Book 4 -->
+                    <div class="book-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#c8102e]">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-[#c8102e] mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#c8102e]">Đường Kách Mệnh</h3>
+                        <p class="text-gray-600 mb-4">Tác phẩm nổi tiếng của Chủ tịch Hồ Chí Minh, viết về con đường cách mạng và giải phóng dân tộc.</p>
+                        <a href="assets/download/DKM.pdf" download="DKM.pdf" class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Tải xuống PDF
+                        </a>
+                    </div>
+
+                    <!-- Book 5 -->
+                    <div class="book-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#c8102e]">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-[#c8102e] mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#c8102e]">Nhật Ký Trong Tù</h3>
+                        <p class="text-gray-600 mb-4">Tập thơ nổi tiếng của Chủ tịch Hồ Chí Minh, được viết trong thời gian Người bị giam cầm ở Trung Quốc.</p>
+                        <a href="assets/download/NKTT.pdf" download="NKTT.pdf" class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Tải xuống PDF
+                        </a>
+                    </div>
+                    <!-- Book 7 - Bio.pdf -->
+                    <div class="book-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#c8102e]">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-[#c8102e] mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#c8102e]">Tiểu Sử Chủ Tịch Hồ Chí Minh</h3>
+                        <p class="text-gray-600 mb-2">Biên soạn: <strong>TS. Chu Đức Tính</strong></p>
+                        <p class="text-gray-600 mb-4">Tài liệu PDF về tiểu sử Chủ tịch Hồ Chí Minh, biên soạn bởi TS. Chu Đức Tính.</p>
+                        <a href="assets/download/Bio.pdf" download="Bio.pdf" class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Tải xuống PDF
+                        </a>
+                    </div>
+                    <!-- Book 6 -->
+                    <div class="book-card bg-white p-6 rounded-lg shadow-lg border-l-4 border-[#c8102e]">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 text-[#c8102e] mb-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-[#c8102e]">Hồ Chí Minh Toàn Tập</h3>
+                        <p class="text-gray-600 mb-4">Bộ sách tập hợp đầy đủ các tác phẩm, bài viết, bài nói của Chủ tịch Hồ Chí Minh trong suốt cuộc đời hoạt động cách mạng.</p>
+                        <a href="https://hochiminh.vn/tac-pham-cua-ho-chi-minh/ho-chi-minh-toan-tap" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                            Xem thêm →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bài Hát Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-[#c8102e]">Bài Hát Về Bác Hồ</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Song 1 -->
+                    <div class="audio-player">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-1">Như Có Bác Hồ Trong Ngày Vui Đại Thắng</h3>
+                                <p class="text-white/80 text-sm">Phạm Tuyên</p>
+                            </div>
+                        </div>
+                        <audio controls class="w-full mt-4" preload="metadata">
+                            <source src="assets/audio/songs/NhuCoBacHo.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát audio.
+                        </audio>
+                    </div>
+
+                    <!-- Song 2 -->
+                    <div class="audio-player">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-1">Bác đang cùng chúng cháu hành quân</h3>
+                                <p class="text-white/80 text-sm">Huy Thục</p>
+                            </div>
+                        </div>
+                        <audio controls class="w-full mt-4" preload="metadata">
+                            <source src="assets/audio/songs/2.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát audio.
+                        </audio>
+                    </div>
+
+                    <!-- Song 3 -->
+                    <div class="audio-player">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-1">Ai Yêu Bác Hồ Chí Minh Hơn Thiếu Niên Nhi Đồng</h3>
+                                <p class="text-white/80 text-sm">Phong Nhã</p>
+                            </div>
+                        </div>
+                        <audio controls class="w-full mt-4" preload="metadata">
+                            <source src="assets/audio/songs/1.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát audio.
+                        </audio>
+                    </div>
+
+                    <!-- Song 4 -->
+                    <div class="audio-player">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-1">Từ Làng Sen</h3>
+                                <p class="text-white/80 text-sm">Phạm Tuyên</p>
+                            </div>
+                        </div>
+                        <audio controls class="w-full mt-4" preload="metadata">
+                            <source src="assets/audio/songs/4.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video YouTube Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-[#c8102e]">Video Về Chủ Tịch Hồ Chí Minh</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <!-- Video 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+                    
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-[#c8102e]">
+                                Chủ tịch Hồ Chí Minh - Cuộc Đời Và Sự Nghiệp
+                            </h3>
+                            <p class="text-gray-600 mb-3">
+                                Tài liệu về cuộc đời và sự nghiệp cách mạng vĩ đại của Chủ tịch Hồ Chí Minh.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=cxKnRdHQIm4"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Xem trên YouTube
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-[#c8102e]">
+                                Bác Hồ Đọc Tuyên Ngôn Độc Lập
+                            </h3>
+                            <p class="text-gray-600 mb-3">
+                                Bác Hồ Đọc Tuyên Ngôn Độc Lập
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=34GKvR8nZus"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Xem trên YouTube
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-[#c8102e]">
+                                Hành Trình Tìm Đường Cứu Nước
+                            </h3>
+                            <p class="text-gray-600 mb-3">
+                                Phim tài liệu về hành trình 30 năm tìm đường cứu nước của Chủ tịch Hồ Chí Minh.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=58HGVK6j-80"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Xem trên YouTube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-[#c8102e]">
+                                Tư Tưởng Hồ Chí Minh
+                            </h3>
+                            <p class="text-gray-600 mb-3">
+                                Chương trình tìm hiểu về hệ thống tư tưởng Hồ Chí Minh và giá trị lịch sử của nó.
+                            </p>
+                            <a href="https://www.youtube.com/watch?v=PS1rvFLjyzU"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center px-4 py-2 bg-[#c8102e] text-white rounded-lg hover:bg-[#a00e26] transition-colors duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                Xem trên YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#c8102e] text-white py-10 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">Trang thông tin về Chủ tịch Hồ Chí Minh.</p>
+            <p class="mt-2 text-lg">Người thực hiện: Phạm Duy Phúc - MSV: 102171</p>
+            <p class="mt-2 text-lg">TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM</p>
+        </div>
+    </footer>
+</body>
+</html>
+

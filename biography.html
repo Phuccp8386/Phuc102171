@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiểu Sử Chủ Tịch Hồ Chí Minh - Chi Tiết</title>
+    <meta name="description" content="Tiểu sử về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh">
+    <meta name="keywords" content="Hồ Chí Minh, tiểu sử, Nguyễn Sinh Cung, Kim Liên, Nam Đàn">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 0 0'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="common.js" defer></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Fix navigation duplicate */
+        header nav.hidden {
+            display: none !important;
+        }
+        @media (min-width: 768px) {
+            header nav.hidden {
+                display: flex !important;
+            }
+        }
+        @media (max-width: 767px) {
+            header nav.hidden {
+                display: none !important;
+            }
+        }
+        #mobile-menu {
+            display: none !important;
+        }
+        @media (max-width: 767px) {
+            #mobile-menu.hidden {
+                display: none !important;
+            }
+            #mobile-menu:not(.hidden) {
+                display: block !important;
+            }
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/biography/HCM_chong_Phap.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid #c8102e;
+            top: 0;
+            left: -0.625rem;
+            z-index: 10;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        /* Fix navigation links font-weight - đảm bảo không bị in đậm khi mới load */
+        header nav a {
+            font-weight: normal !important;
+        }
+        
+        #mobile-menu a {
+            font-weight: normal !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                Hồ Chí Minh
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[50vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl leading-tight mb-4">Tiểu Sử</h1>
+                <p class="text-lg md:text-2xl italic">Cuộc đời và hành trình của Chủ tịch Hồ Chí Minh</p>
+            </div>
+        </section>
+
+        <!-- Chi tiết tiểu sử -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-[#c8102e]">Cuộc Đời &amp; Tiểu Sử</h2>
+
+                <!-- Thời thơ ấu -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white p-8 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Thời Thơ Ấu (1890-1911)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">Gia đình và quê hương</h4>
+                                <p class="mb-4">Chủ tịch Hồ Chí Minh, tên khai sinh là Nguyễn Sinh Cung, sinh ngày 19/05/1890 tại làng Hoàng Trù, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An - một vùng đất giàu truyền thống cách mạng.</p>
+
+                                <h4 class="text-lg font-semibold mb-2">Cha mẹ</h4>
+                                <p class="mb-4"><strong>Cha:</strong> Nguyễn Sinh Sắc (1862-1929), một nhà nho yêu nước, từng đỗ Phó bảng, có tư tưởng tiến bộ, thường xuyên giáo dục con về lòng yêu nước.</p>
+                                <p class="mb-4"><strong>Mẹ:</strong> Hoàng Thị Loan (1868-1901), người phụ nữ đức hạnh, tần tảo, là tấm gương về đạo đức và sự hy sinh cho gia đình.</p>
+
+                                <h4 class="text-lg font-semibold mb-2">Anh chị em</h4>
+                                <p class="mb-4">Người có hai anh chị em: Nguyễn Thị Thanh (chị gái) và Nguyễn Sinh Khiêm (anh trai). Cả gia đình đều có tinh thần yêu nước và cách mạng.</p>
+
+                                <h4 class="text-lg font-semibold mb-2">Tuổi thơ</h4>
+                                <p class="mb-4">Tuổi thơ của Người gắn liền với cảnh nghèo khó của gia đình nông dân, nhưng được nuôi dưỡng trong tình yêu thương và giáo dục về đạo đức, lòng yêu nước từ cha mẹ.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/biography/kimlien.jpg" alt="Khu di tích Kim Liên, Nam Đàn, Nghệ An" class="w-full h-48 object-cover rounded-lg mb-4">
+                                <p class="text-sm mb-4 italic">Khu di tích Kim Liên, Nam Đàn, Nghệ An</p>
+
+                                <img src="assets/images/biography/GDBac.jpg" alt="Gia đình của Chủ tịch Hồ Chí Minh" class="w-full h-50 object-cover rounded-lg">
+                                <p class="text-sm mt-2 italic">Gia đình của Chủ tịch Hồ Chí Minh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hành trình tìm đường cứu nước -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-[#c8102e]">
+                        <h3 class="text-2xl font-bold mb-6 text-[#c8102e]">Hành Trình Tìm Đường Cứu Nước (1911-1941)</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-[#c8102e] text-white rounded-full flex items-center justify-center font-bold">1</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">05/06/1911 - Ra đi từ Bến cảng Nhà Rồng</h4>
+                                    <p class="mb-2">Từ Bến cảng Nhà Rồng (Sài Gòn), Người lên tàu Amiral Latouche Tréville với tên Văn Ba, làm phụ bếp trên tàu để có cơ hội ra nước ngoài.</p>
+                                    <p class="mb-2">Đây là bước đầu tiên trong cuộc hành trình 30 năm tìm đường cứu nước, với quyết tâm "Tự do cho đồng bào tôi, độc lập cho Tổ quốc tôi".</p>
+                                    <p class="text-sm text-gray-600 italic">"Tôi muốn đi ra nước ngoài để xem nước Pháp và các nước khác. Sau khi xem xét họ làm như thế nào, tôi sẽ trở về giúp đồng bào chúng ta."</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-[#c8102e] text-white rounded-full flex items-center justify-center font-bold">2</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">1911-1917 - Hoạt động ở Pháp</h4>
+                                    <p class="mb-2">Người làm nhiều nghề khác nhau: phụ bếp, thợ ảnh, thợ điện, thợ nung gốm... để kiếm sống và học hỏi.</p>
+                                    <p class="mb-2">Tham gia các hoạt động chính trị, học tập và nghiên cứu về cách mạng, tiếp xúc với các nhà cách mạng quốc tế.</p>
+                                    <p class="mb-2">Đọc nhiều sách báo tiến bộ, nghiên cứu các cuộc cách mạng trên thế giới, đặc biệt là Cách mạng Pháp và Cách mạng Nga.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-[#c8102e] text-white rounded-full flex items-center justify-center font-bold">3</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">1919 - Gửi bản Yêu sách của nhân dân An Nam</h4>
+                                    <p class="mb-2">Tại Hội nghị Versailles, Người gửi bản "Yêu sách của nhân dân An Nam" đòi quyền tự do, dân chủ và bình đẳng cho nhân dân Việt Nam.</p>
+                                    <p class="mb-2">Bản yêu sách gồm 8 điểm chính: ân xá tù chính trị, cải cách pháp luật, tự do báo chí, tự do hội họp, tự do cư trú, tự do xuất dương, tự do học tập, thay thế chế độ sắc lệnh bằng chế độ pháp luật.</p>
+                                    <p class="text-sm text-gray-600 italic">Đây là lần đầu tiên tiếng nói của nhân dân Việt Nam được phát ra trên trường quốc tế.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-[#c8102e] text-white rounded-full flex items-center justify-center font-bold">4</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">1920 - Tham gia Đảng Cộng sản Pháp</h4>
+                                    <p class="mb-2">Ngày 25/12/1920, tại Đại hội Tours, Người bỏ phiếu tán thành Quốc tế III và trở thành một trong những người sáng lập Đảng Cộng sản Pháp.</p>
+                                    <p class="mb-2">Đây là bước ngoặt quan trọng trong tư tưởng cách mạng của Người, từ chủ nghĩa yêu nước chuyển sang chủ nghĩa cộng sản.</p>
+                                    <p class="text-sm text-gray-600 italic">"Muốn cứu nước và giải phóng dân tộc, không có con đường nào khác ngoài con đường cách mạng vô sản."</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-[#c8102e] text-white rounded-full flex items-center justify-center font-bold">5</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">1923-1924 - Học tập tại Liên Xô</h4>
+                                    <p class="mb-2">Người đến Moskva học tập tại Trường Đại học Phương Đông, nghiên cứu chủ nghĩa Mác-Lênin và kinh nghiệm cách mạng.</p>
+                                    <p class="mb-2">Tham gia các hoạt động của Quốc tế Cộng sản, gặp gỡ nhiều nhà cách mạng từ các nước thuộc địa.</p>
+                                    <p class="text-sm text-gray-600 italic">Đây là nơi Người tiếp thu chủ nghĩa Mác-Lênin một cách có hệ thống.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-[#c8102e] text-white rounded-full flex items-center justify-center font-bold">6</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">1924-1927 - Hoạt động ở Trung Quốc</h4>
+                                    <p class="mb-2">Người đến Quảng Châu, thành lập Hội Việt Nam Cách mạng Thanh niên (1925), xuất bản báo "Thanh niên".</p>
+                                    <p class="mb-2">Mở các lớp huấn luyện cách mạng, đào tạo cán bộ cho cách mạng Việt Nam.</p>
+                                    <p class="text-sm text-gray-600 italic">Tại đây, Người viết tác phẩm "Đường Kách mệnh" - cẩm nang cách mạng cho cán bộ.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thành lập Đảng -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Thành Lập Đảng Cộng Sản Việt Nam (1930)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Hội nghị hợp nhất</h4>
+                                <p class="mb-4">Ngày 03/02/1930, tại Hồng Kông, Người chủ trì Hội nghị hợp nhất các tổ chức cộng sản trong nước.</p>
+                                <p class="mb-4">Thành lập Đảng Cộng sản Việt Nam, đánh dấu bước ngoặt vĩ đại của cách mạng Việt Nam.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Các tổ chức được hợp nhất</h4>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li>Đông Dương Cộng sản Đảng</li>
+                                    <li>An Nam Cộng sản Đảng</li>
+                                    <li>Đông Dương Cộng sản Liên đoàn</li>
+                                </ul>
+
+                                <h4 class="text-lg font-semibold mb-4">Ý nghĩa lịch sử</h4>
+                                <p class="mb-4">Đây là sự kiện có ý nghĩa quyết định đối với cách mạng Việt Nam, tạo ra sự thống nhất về tổ chức và tư tưởng.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/biography/Dang.jpg" alt="Tranh tư liệu về việc thành lập Đảng Cộng sản Việt Nam năm 1930" class="w-full h-50 object-cover rounded-lg mb-4">
+                                <p class="text-sm mb-4 italic">Tranh tư liệu về hội nghị thành lập Đảng Cộng sản Việt Nam</p>
+
+                                <img src="assets/images/biography/chanhcuong.jpg" alt="Chánh cương vắn tắt" class="w-full h-50 object-cover rounded-lg">
+                                <p class="text-sm mt-2 italic">Chánh cương vắn tắt của Đảng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đọc Tuyên ngôn Độc lập -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Tuyên Ngôn Độc Lập (1945)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Ngày 02/09/1945</h4>
+                                <p class="mb-4">Tại Quảng trường Ba Đình, Hà Nội, Người đọc Tuyên ngôn Độc lập, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.</p>
+                                <p class="mb-4">"Tất cả mọi người đều sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được..."</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Nội dung chính của Tuyên ngôn</h4>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li>Tố cáo tội ác của thực dân Pháp</li>
+                                    <li>Khẳng định quyền độc lập của dân tộc Việt Nam</li>
+                                    <li>Tuyên bố thành lập nước Việt Nam Dân chủ Cộng hòa</li>
+                                    <li>Kêu gọi nhân dân đoàn kết bảo vệ độc lập</li>
+                                </ul>
+
+                                <h4 class="text-lg font-semibold mb-4">Ý nghĩa lịch sử</h4>
+                                <p class="mb-4">Đây là văn kiện lịch sử quan trọng, đánh dấu sự ra đời của nhà nước độc lập đầu tiên ở Đông Nam Á.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/biography/TNDL.jpg" alt="Tuyên ngôn Độc lập" class="w-full h-50 object-cover rounded-lg mb-4">
+                                <p class="text-sm mb-4 italic">Tuyên ngôn Độc lập</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Những năm cuối đời -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Những Năm Cuối Đời (1945-1969)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Lãnh đạo kháng chiến chống Pháp (1945-1954)</h4>
+                                <p class="mb-4">Người lãnh đạo nhân dân Việt Nam tiến hành cuộc kháng chiến trường kỳ chống thực dân Pháp, kết thúc bằng chiến thắng Điện Biên Phủ năm 1954.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Lãnh đạo kháng chiến chống Mỹ (1954-1969)</h4>
+                                <p class="mb-4">Tiếp tục lãnh đạo cuộc kháng chiến chống đế quốc Mỹ, đấu tranh cho sự thống nhất đất nước.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Xây dựng đất nước</h4>
+                                <p class="mb-4">Đặt nền móng cho việc xây dựng chế độ mới, phát triển kinh tế, văn hóa, xã hội.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Ngày 02/09/1969</h4>
+                                <p class="mb-4">Chủ tịch Hồ Chí Minh qua đời tại Hà Nội, để lại niềm tiếc thương vô hạn cho toàn dân tộc Việt Nam và bạn bè quốc tế.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/biography/HCM_chong_Phap.jpg" alt="Bác Hồ trong kháng chiến" class="w-full h-48 object-cover rounded-lg mb-4">
+                                <p class="text-sm mb-4 italic">Chủ tịch Hồ Chí Minh chủ trì phiên họp Hội đồng Chính phủ sau chiến thắng Điện Biên Phủ tại xã Kim Quan, huyện Yên Sơn, tỉnh Tuyên Quang (23/7/1954).</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#c8102e] text-white py-10 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">Trang thông tin về Chủ tịch Hồ Chí Minh.</p>
+            <p class="mt-2 text-lg">Người thực hiện: Phạm Duy Phúc - MSV: 102171</p>
+            <p class="mt-2 text-lg">TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM</p>
+        </div>
+    </footer>
+
+</body>
+</html>

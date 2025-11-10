@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Tưởng Hồ Chí Minh - Chi Tiết</title>
+    <meta name="description" content="Tư tưởng Hồ Chí Minh - Hệ thống quan điểm toàn diện về cách mạng Việt Nam">
+    <meta name="keywords" content="Hồ Chí Minh, tư tưởng, cách mạng, độc lập dân tộc, chủ nghĩa xã hội">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 0 0'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/ideology/Tutuong.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                Hồ Chí Minh
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="text-yellow-300 border-b-2 border-yellow-300">Tư tưởng</a>
+                <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[50vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Tư Tưởng Hồ Chí Minh</h1>
+                <p class="text-lg md:text-2xl italic">Hệ thống quan điểm toàn diện về cách mạng Việt Nam</p>
+            </div>
+        </section>
+
+        <!-- Tư tưởng chính -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#c8102e]">Tư Tưởng Hồ Chí Minh</h2>
+
+                <!-- Giới thiệu -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Định nghĩa</h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Tư tưởng Hồ Chí Minh là một hệ thống quan điểm toàn diện và sâu sắc về những vấn đề cơ bản của cách mạng Việt Nam,
+                            là kết quả của sự vận dụng và phát triển sáng tạo chủ nghĩa Mác - Lênin vào điều kiện cụ thể của nước ta,
+                            kế thừa và phát triển các giá trị truyền thống tốt đẹp của dân tộc, tiếp thu tinh hoa văn hóa nhân loại.
+                        </p>
+
+                        <h4 class="text-lg font-semibold mb-3">Đặc điểm của Tư tưởng Hồ Chí Minh</h4>
+                        <ul class="list-disc list-inside space-y-2 mb-4">
+                            <li><strong>Tính khoa học:</strong> Dựa trên chủ nghĩa Mác-Lênin và thực tiễn cách mạng</li>
+                            <li><strong>Tính cách mạng:</strong> Phục vụ sự nghiệp giải phóng dân tộc và xây dựng chủ nghĩa xã hội</li>
+                            <li><strong>Tính nhân văn:</strong> Vì con người, vì hạnh phúc của nhân dân</li>
+                            <li><strong>Tính thực tiễn:</strong> Gắn liền với thực tiễn cách mạng Việt Nam</li>
+                        </ul>
+
+                        <h4 class="text-lg font-semibold mb-3">Nguồn gốc hình thành</h4>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Chủ nghĩa Mác-Lênin</li>
+                            <li>Truyền thống yêu nước và cách mạng của dân tộc Việt Nam</li>
+                            <li>Tinh hoa văn hóa nhân loại</li>
+                            <li>Kinh nghiệm thực tiễn của cách mạng thế giới</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Các quan điểm cụ thể -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Các Quan Điểm Cụ Thể</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+
+                        <!-- Quan điểm về độc lập dân tộc -->
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Quan điểm về độc lập dân tộc</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Độc lập là quyền thiêng liêng:</strong>
+                                    <p class="text-sm">"Không có gì quý hơn độc lập, tự do" - đây là mục tiêu cao nhất của cách mạng.</p>
+                                </li>
+                                <li>
+                                    <strong>Độc lập gắn với chủ nghĩa xã hội:</strong>
+                                    <p class="text-sm">Độc lập dân tộc phải gắn liền với chủ nghĩa xã hội mới có ý nghĩa thực sự.</p>
+                                </li>
+                                <li>
+                                    <strong>Tự lực cánh sinh:</strong>
+                                    <p class="text-sm">Độc lập phải dựa trên sức mạnh của chính mình, không phụ thuộc vào nước ngoài.</p>
+                                </li>
+                                <li>
+                                    <strong>Đoàn kết quốc tế:</strong>
+                                    <p class="text-sm">Độc lập dân tộc trong đoàn kết quốc tế, ủng hộ các dân tộc bị áp bức.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quan điểm về đại đoàn kết -->
+                        <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Quan điểm về đại đoàn kết</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Sức mạnh của đoàn kết:</strong>
+                                    <p class="text-sm">"Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công."</p>
+                                </li>
+                                <li>
+                                    <strong>Đoàn kết toàn dân tộc:</strong>
+                                    <p class="text-sm">Tập hợp mọi lực lượng yêu nước, không phân biệt giai cấp, tôn giáo, dân tộc.</p>
+                                </li>
+                                <li>
+                                    <strong>Đoàn kết trong Đảng:</strong>
+                                    <p class="text-sm">Đảng phải đoàn kết nhất trí, thống nhất về tư tưởng và hành động.</p>
+                                </li>
+                                <li>
+                                    <strong>Đoàn kết quốc tế:</strong>
+                                    <p class="text-sm">Đoàn kết với các dân tộc bị áp bức, với các lực lượng tiến bộ trên thế giới.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quan điểm về nhà nước -->
+                        <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Quan điểm về nhà nước</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Nhà nước của dân:</strong>
+                                    <p class="text-sm">"Nhà nước của dân, do dân, vì dân" - nhân dân là chủ thể của quyền lực nhà nước.</p>
+                                </li>
+                                <li>
+                                    <strong>Dân chủ thực sự:</strong>
+                                    <p class="text-sm">Xây dựng nền dân chủ thực sự, nhân dân tham gia quản lý nhà nước.</p>
+                                </li>
+                                <li>
+                                    <strong>Pháp luật nghiêm minh:</strong>
+                                    <p class="text-sm">Nhà nước phải được tổ chức theo pháp luật, mọi người đều bình đẳng trước pháp luật.</p>
+                                </li>
+                                <li>
+                                    <strong>Cán bộ công chức:</strong>
+                                    <p class="text-sm">Cán bộ phải là công bộc của dân, phục vụ nhân dân, không được lạm quyền.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quan điểm về đạo đức -->
+                        <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Quan điểm về đạo đức</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Cần, Kiệm, Liêm, Chính:</strong>
+                                    <p class="text-sm">Bốn đức tính cơ bản của người cách mạng: siêng năng, tiết kiệm, trong sạch, ngay thẳng.</p>
+                                </li>
+                                <li>
+                                    <strong>Chí công vô tư:</strong>
+                                    <p class="text-sm">Đặt lợi ích của tập thể, của nhân dân lên trên lợi ích cá nhân.</p>
+                                </li>
+                                <li>
+                                    <strong>Đạo đức là gốc:</strong>
+                                    <p class="text-sm">"Đạo đức là gốc của người cách mạng" - đạo đức quyết định thành công của cách mạng.</p>
+                                </li>
+                                <li>
+                                    <strong>Rèn luyện đạo đức:</strong>
+                                    <p class="text-sm">Đạo đức phải được rèn luyện thường xuyên, trong mọi hoàn cảnh.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phương pháp luận -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-indigo-600 to-indigo-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Phương Pháp Luận</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Nguyên tắc cơ bản</h4>
+                                <ul class="space-y-3">
+                                    <li>
+                                        <strong>Thực tiễn là tiêu chuẩn chân lý:</strong>
+                                        <p class="text-sm">Mọi lý luận phải được kiểm nghiệm qua thực tiễn.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Phát triển sáng tạo:</strong>
+                                        <p class="text-sm">Vận dụng sáng tạo chủ nghĩa Mác-Lênin vào điều kiện cụ thể.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Kế thừa và phát triển:</strong>
+                                        <p class="text-sm">Kế thừa những giá trị tốt đẹp của dân tộc và nhân loại.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Phương pháp nghiên cứu</h4>
+                                <ul class="space-y-3">
+                                    <li>
+                                        <strong>Phân tích cụ thể:</strong>
+                                        <p class="text-sm">Phân tích tình hình cụ thể để đưa ra giải pháp phù hợp.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Lịch sử và logic:</strong>
+                                        <p class="text-sm">Kết hợp phương pháp lịch sử và logic trong nghiên cứu.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Thực tiễn và lý luận:</strong>
+                                        <p class="text-sm">Gắn lý luận với thực tiễn, học tập từ thực tiễn.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Các nội dung chính -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Các Nội Dung Chính</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- Độc lập dân tộc -->
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Độc lập dân tộc</h4>
+                            <p class="text-sm leading-relaxed mb-2">
+                                Độc lập dân tộc gắn liền với chủ nghĩa xã hội là nội dung cốt lõi của tư tưởng Hồ Chí Minh.
+                                Độc lập dân tộc là điều kiện tiên quyết để xây dựng chủ nghĩa xã hội.
+                            </p>
+                            <p class="text-xs text-gray-300">
+                                "Không có gì quý hơn độc lập, tự do" - Đây là mục tiêu cao nhất của cách mạng Việt Nam.
+                            </p>
+                        </div>
+
+                        <!-- Đại đoàn kết -->
+                        <div class="bg-gradient-to-br from-green-500 to-green-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Đại đoàn kết</h4>
+                            <p class="text-sm leading-relaxed mb-2">
+                                Sức mạnh của nhân dân, của khối đại đoàn kết toàn dân tộc.
+                                Đoàn kết là sức mạnh, là then chốt của thành công.
+                            </p>
+                            <p class="text-xs text-gray-300">
+                                "Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công."
+                            </p>
+                        </div>
+
+                        <!-- Nhà nước của dân -->
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Nhà nước của dân</h4>
+                            <p class="text-sm leading-relaxed mb-2">
+                                Quyền làm chủ của nhân dân, xây dựng Nhà nước của dân, do dân, vì dân.
+                                Nhân dân là chủ thể của quyền lực nhà nước.
+                            </p>
+                            <p class="text-xs text-gray-300">
+                                Nhà nước phải thực sự là của dân, do dân và vì dân.
+                            </p>
+                        </div>
+
+                        <!-- Đạo đức cách mạng -->
+                        <div class="bg-gradient-to-br from-red-500 to-red-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Đạo đức cách mạng</h4>
+                            <p class="text-sm leading-relaxed mb-2">
+                                Cần, Kiệm, Liêm, Chính, Chí công vô tư.
+                                Đạo đức là gốc của người cách mạng.
+                            </p>
+                            <p class="text-xs text-gray-300">
+                                Đạo đức cách mạng là nền tảng tinh thần của xã hội mới.
+                            </p>
+                        </div>
+
+                        <!-- Văn hóa -->
+                        <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Văn hóa</h4>
+                            <p class="text-sm leading-relaxed">
+                                Văn hóa là nền tảng tinh thần của xã hội, vừa là mục tiêu vừa là động lực của sự phát triển.
+                            </p>
+                        </div>
+
+                        <!-- Con người -->
+                        <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Con người</h4>
+                            <p class="text-sm leading-relaxed">
+                                Con người là vốn quý nhất, là mục tiêu và động lực của sự phát triển.
+                                Muốn xây dựng chủ nghĩa xã hội, trước hết phải có người xã hội chủ nghĩa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đạo đức cách mạng chi tiết -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Đạo Đức Cách Mạng</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Cần, Kiệm, Liêm, Chính</h4>
+                                <ul class="space-y-3">
+                                    <li><strong>Cần:</strong> Siêng năng, chăm chỉ, cố gắng, bền bỉ</li>
+                                    <li><strong>Kiệm:</strong> Tiết kiệm, không xa xỉ, không hoang phí</li>
+                                    <li><strong>Liêm:</strong> Trong sạch, không tham lam</li>
+                                    <li><strong>Chính:</strong> Ngay thẳng, không tà, không vẹo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Chí công vô tư</h4>
+                                <p class="mb-4">Đặt lợi ích của tập thể, của nhân dân lên trên lợi ích cá nhân.</p>
+                                <p class="mb-4">Không có lợi ích nào khác ngoài lợi ích của Tổ quốc, của nhân dân.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ý nghĩa và giá trị -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Ý Nghĩa Và Giá Trị</h3>
+                        <div class="space-y-4">
+                            <p><strong>Ý nghĩa lịch sử:</strong> Tư tưởng Hồ Chí Minh là ngọn đuốc soi đường cho cách mạng Việt Nam, là kim chỉ nam cho hành động của Đảng và nhân dân ta.</p>
+                            <p><strong>Giá trị thời đại:</strong> Tư tưởng của Người không chỉ có ý nghĩa với Việt Nam mà còn có giá trị quốc tế, góp phần vào sự nghiệp giải phóng các dân tộc bị áp bức.</p>
+                            <p><strong>Giá trị thực tiễn:</strong> Tư tưởng Hồ Chí Minh vẫn là nền tảng tư tưởng và kim chỉ nam cho hành động của Đảng Cộng sản Việt Nam và nhân dân Việt Nam trong công cuộc đổi mới, xây dựng và bảo vệ Tổ quốc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#c8102e] text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mt-4">
+                <a href="HCM.html" class="text-yellow-300 hover:text-yellow-200 transition-colors">← Về trang chủ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>// Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

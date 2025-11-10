@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Tương Tác - Chủ tịch Hồ Chí Minh</title>
+    <meta name="description" content="Timeline tương tác về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="HCM.html" class="flex items-center text-2xl font-bold">
+                    Hồ Chí Minh
+                </a>
+
+                <nav class="hidden md:flex space-x-8 text-lg">
+                    <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                    <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                    <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                    <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                    <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                    <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                    <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                </nav>
+
+                <!-- Dark/Light Mode Toggle -->
+                <button id="theme-toggle" type="button" class="ml-4 p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-300" aria-label="Chuyển đổi chế độ sáng/tối">
+                    <svg id="sun-icon" class="w-6 h-6 text-yellow-300 hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <svg id="moon-icon" class="w-6 h-6 text-blue-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">Timeline Tương Tác</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeInUp delay-200">Hành trình cuộc đời Chủ tịch Hồ Chí Minh</p>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 animate-fadeInUp delay-400">
+                <button type="button" class="filter-btn active px-6 py-2 rounded-full bg-white/20 text-white hover:bg-white/30 transition-colors duration-300" data-period="all">
+                    Tất cả
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300" data-period="childhood">
+                    Thời thơ ấu
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300" data-period="journey">
+                    Hành trình tìm đường
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300" data-period="revolution">
+                    Cách mạng
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300" data-period="leadership">
+                    Lãnh đạo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="relative">
+                <div class="timeline-line"></div>
+                <div id="timeline-container">
+                    <!-- Timeline items will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">Chủ tịch Hồ Chí Minh</h3>
+            <p class="text-lg mb-2">Vị Cha Già Dân Tộc Việt Nam</p>
+            <p class="text-yellow-200">Kính tặng Vị Cha Già Dân Tộc.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark/Light Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            body.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            body.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+
+            if (body.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                localStorage.setItem('theme', 'light');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        });
+
+        // Timeline data
+        const timelineData = [
+            {
+                year: "1890",
+                title: "Sinh ra tại Kim Liên",
+                description: "Nguyễn Sinh Cung sinh ngày 19/05/1890 tại làng Hoàng Trù, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An.",
+                period: "childhood",
+                tags: ["Sinh ra", "Kim Liên", "Nghệ An"]
+            },
+            {
+                year: "1911",
+                title: "Ra đi tìm đường cứu nước",
+                description: "Ngày 05/06/1911, từ Bến cảng Nhà Rồng, Người lên tàu Amiral Latouche Tréville với tên Văn Ba, bắt đầu cuộc hành trình 30 năm tìm đường cứu nước.",
+                period: "journey",
+                tags: ["Ra đi", "Bến cảng Nhà Rồng", "Tìm đường cứu nước"]
+            },
+            {
+                year: "1919",
+                title: "Gửi bản Yêu sách của nhân dân An Nam",
+                description: "Tại Hội nghị Versailles, Người gửi bản 'Yêu sách của nhân dân An Nam' đòi quyền tự do, dân chủ và bình đẳng cho nhân dân Việt Nam.",
+                period: "journey",
+                tags: ["Versailles", "Yêu sách", "Quyền dân tộc"]
+            },
+            {
+                year: "1920",
+                title: "Tham gia Đảng Cộng sản Pháp",
+                description: "Ngày 25/12/1920, tại Đại hội Tours, Người bỏ phiếu tán thành Quốc tế III và trở thành một trong những người sáng lập Đảng Cộng sản Pháp.",
+                period: "journey",
+                tags: ["Đảng Cộng sản Pháp", "Quốc tế III", "Bước ngoặt"]
+            },
+            {
+                year: "1925",
+                title: "Thành lập Hội Việt Nam Cách mạng Thanh niên",
+                description: "Tại Quảng Châu, Người thành lập Hội Việt Nam Cách mạng Thanh niên, xuất bản báo 'Thanh niên' và mở các lớp huấn luyện cách mạng.",
+                period: "revolution",
+                tags: ["Quảng Châu", "Hội Thanh niên", "Báo Thanh niên"]
+            },
+            {
+                year: "1930",
+                title: "Thành lập Đảng Cộng sản Việt Nam",
+                description: "Ngày 03/02/1930, tại Hồng Kông, Người chủ trì Hội nghị hợp nhất các tổ chức cộng sản trong nước, thành lập Đảng Cộng sản Việt Nam.",
+                period: "revolution",
+                tags: ["Hồng Kông", "Hợp nhất", "Đảng Cộng sản Việt Nam"]
+            },
+            {
+                year: "1941",
+                title: "Về nước lãnh đạo cách mạng",
+                description: "Ngày 28/01/1941, Người về nước sau 30 năm xa Tổ quốc, trực tiếp lãnh đạo phong trào cách mạng trong nước.",
+                period: "leadership",
+                tags: ["Về nước", "Lãnh đạo", "Cách mạng"]
+            },
+            {
+                year: "1945",
+                title: "Đọc Tuyên ngôn Độc lập",
+                description: "Ngày 02/09/1945, tại Quảng trường Ba Đình, Hà Nội, Người đọc Tuyên ngôn Độc lập, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.",
+                period: "leadership",
+                tags: ["Ba Đình", "Tuyên ngôn Độc lập", "Việt Nam Dân chủ Cộng hòa"]
+            },
+            {
+                year: "1954",
+                title: "Chiến thắng Điện Biên Phủ",
+                description: "Ngày 07/05/1954, chiến thắng Điện Biên Phủ kết thúc cuộc kháng chiến chống Pháp, đánh dấu sự kết thúc của chủ nghĩa thực dân cũ.",
+                period: "leadership",
+                tags: ["Điện Biên Phủ", "Chiến thắng", "Kết thúc kháng chiến"]
+            },
+            {
+                year: "1969",
+                title: "Qua đời tại Hà Nội",
+                description: "Ngày 02/09/1969, Chủ tịch Hồ Chí Minh qua đời tại Hà Nội, để lại niềm tiếc thương vô hạn cho toàn dân tộc Việt Nam và bạn bè quốc tế.",
+                period: "leadership",
+                tags: ["Qua đời", "Hà Nội", "Tiếc thương"]
+            }
+        ];
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const timelineContainer = document.getElementById('timeline-container');
+
+        function renderTimeline(filteredData = timelineData) {
+            timelineContainer.innerHTML = '';
+
+            filteredData.forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item';
+                timelineItem.style.animationDelay = `${index * 0.1}s`;
+
+                timelineItem.innerHTML = `
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">${item.year}</div>
+                        <h3 class="timeline-title">${item.title}</h3>
+                        <p class="timeline-description">${item.description}</p>
+                        <div class="timeline-tags">
+                            ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+
+                timelineContainer.appendChild(timelineItem);
+            });
+
+            // Trigger animation
+            setTimeout(() => {
+                const items = document.querySelectorAll('.timeline-item');
+                items.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, index * 100);
+                });
+            }, 100);
+        }
+
+        // Filter by period
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-white/20');
+                    btn.classList.add('bg-white/10');
+                });
+
+                button.classList.add('active', 'bg-white/20');
+                button.classList.remove('bg-white/10');
+
+                const period = button.dataset.period;
+                let filteredData = timelineData;
+
+                if (period !== 'all') {
+                    filteredData = timelineData.filter(item => item.period === period);
+                }
+
+                renderTimeline(filteredData);
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Initial render
+        renderTimeline();
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Đang chuyển hướng...</title>
+
+  <!-- Chuyển hướng ngay sang HCM.html -->
+  <meta http-equiv="refresh" content="0; url=HCM.html" />
+
+  <!-- Fallback bằng JavaScript (nếu meta-refresh bị chặn) -->
+  <script src="redirect.js" defer></script>
+</head>
+<body>
+  <p>Nếu bạn không được chuyển hướng tự động, hãy bấm
+    <a href="HCM.html">vào đây để vào trang chủ</a>.
+  </p>
+</body>
+</html>

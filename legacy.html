@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di Sản Chủ Tịch Hồ Chí Minh - Chi Tiết</title>
+    <meta name="description" content="Di sản vĩ đại mà Chủ tịch Hồ Chí Minh để lại cho dân tộc Việt Nam và thế giới">
+    <meta name="keywords" content="Hồ Chí Minh, di sản, UNESCO, anh hùng giải phóng dân tộc, danh nhân văn hóa">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/legacy/Disan.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                Hồ Chí Minh
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                <a href="legacy.html" class="text-yellow-300 border-b-2 border-yellow-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[50vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Di Sản Vĩ Đại</h1>
+                <p class="text-lg md:text-2xl italic">Những gì Chủ tịch Hồ Chí Minh để lại cho dân tộc và thế giới</p>
+            </div>
+        </section>
+
+        <!-- Di sản chính -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#c8102e]">Di Sản Để Lại</h2>
+                <!-- UNESCO -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold">Danh Nhân Văn Hóa Thế Giới</h3>
+                        </div>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Năm 1987, UNESCO đã ra Nghị quyết 24C/18.65 vinh danh Hồ Chí Minh là
+                            <strong>"Anh hùng giải phóng dân tộc và Nhà văn hóa kiệt xuất của Việt Nam"</strong>.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Đây là sự ghi nhận của cộng đồng quốc tế về những đóng góp to lớn của Người đối với sự nghiệp giải phóng dân tộc và phát triển văn hóa nhân loại.
+                        </p>
+                        <h4 class="text-lg font-semibold mb-3">Nội dung Nghị quyết UNESCO</h4>
+                        <ul class="list-disc list-inside space-y-2 mb-4">
+                            <li>Ghi nhận những đóng góp quan trọng của Hồ Chí Minh trong sự nghiệp giải phóng dân tộc</li>
+                            <li>Đánh giá cao những cống hiến của Người cho sự phát triển văn hóa và giáo dục</li>
+                            <li>Khuyến khích các quốc gia thành viên UNESCO tổ chức các hoạt động kỷ niệm</li>
+                            <li>Đề nghị Tổng Giám đốc UNESCO hỗ trợ các hoạt động kỷ niệm này</li>
+                        </ul>
+                        <h4 class="text-lg font-semibold mb-3">Ý nghĩa quốc tế</h4>
+                        <p class="text-lg leading-relaxed">
+                            Đây là lần đầu tiên một nhà lãnh đạo cách mạng Việt Nam được UNESCO vinh danh, thể hiện sự đánh giá cao của cộng đồng quốc tế về những đóng góp của Người.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Các thành tựu cụ thể -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Các Thành Tựu Cụ Thể</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Thành tựu chính trị -->
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu chính trị</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Giải phóng dân tộc:</strong>
+                                    <p class="text-sm">Lãnh đạo thành công sự nghiệp giải phóng dân tộc, chấm dứt ách đô hộ của thực dân, đế quốc.</p>
+                                </li>
+                                <li>
+                                    <strong>Thành lập nhà nước:</strong>
+                                    <p class="text-sm">Khai sinh ra nước Việt Nam Dân chủ Cộng hòa, đặt nền móng cho nhà nước độc lập.</p>
+                                </li>
+                                <li>
+                                    <strong>Xây dựng Đảng:</strong>
+                                    <p class="text-sm">Thành lập và lãnh đạo Đảng Cộng sản Việt Nam, đảm bảo sự lãnh đạo của Đảng.</p>
+                                </li>
+                                <li>
+                                    <strong>Đoàn kết dân tộc:</strong>
+                                    <p class="text-sm">Xây dựng khối đại đoàn kết toàn dân tộc, tập hợp mọi lực lượng yêu nước.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Thành tựu quân sự -->
+                        <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu quân sự</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Chiến thắng Điện Biên Phủ:</strong>
+                                    <p class="text-sm">Lãnh đạo chiến thắng Điện Biên Phủ năm 1954, đánh dấu sự kết thúc của chủ nghĩa thực dân cũ.</p>
+                                </li>
+                                <li>
+                                    <strong>Chiến lược kháng chiến:</strong>
+                                    <p class="text-sm">Đề ra chiến lược "toàn dân, toàn diện, trường kỳ, tự lực cánh sinh".</p>
+                                </li>
+                                <li>
+                                    <strong>Xây dựng quân đội:</strong>
+                                    <p class="text-sm">Xây dựng Quân đội Nhân dân Việt Nam với tinh thần "quân đội của dân, do dân, vì dân".</p>
+                                </li>
+                                <li>
+                                    <strong>Nghệ thuật quân sự:</strong>
+                                    <p class="text-sm">Phát triển nghệ thuật quân sự Việt Nam, kết hợp đấu tranh chính trị với đấu tranh vũ trang.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Thành tựu kinh tế -->
+                        <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu kinh tế</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Cải cách ruộng đất:</strong>
+                                    <p class="text-sm">Thực hiện cải cách ruộng đất, giải phóng nông dân khỏi ách áp bức phong kiến.</p>
+                                </li>
+                                <li>
+                                    <strong>Phát triển công nghiệp:</strong>
+                                    <p class="text-sm">Xây dựng nền công nghiệp quốc dân, phát triển các ngành kinh tế chủ chốt.</p>
+                                </li>
+                                <li>
+                                    <strong>Cơ sở hạ tầng:</strong>
+                                    <p class="text-sm">Xây dựng hệ thống giao thông, thủy lợi, điện lực phục vụ phát triển kinh tế.</p>
+                                </li>
+                                <li>
+                                    <strong>Kinh tế tự chủ:</strong>
+                                    <p class="text-sm">Xây dựng nền kinh tế độc lập, tự chủ, không phụ thuộc vào nước ngoài.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Thành tựu văn hóa -->
+                        <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu văn hóa</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Xóa nạn mù chữ:</strong>
+                                    <p class="text-sm">Phát động phong trào "Bình dân học vụ", xóa nạn mù chữ cho hàng triệu người.</p>
+                                </li>
+                                <li>
+                                    <strong>Phát triển giáo dục:</strong>
+                                    <p class="text-sm">Xây dựng hệ thống giáo dục từ mầm non đến đại học, đào tạo nhân tài.</p>
+                                </li>
+                                <li>
+                                    <strong>Văn học nghệ thuật:</strong>
+                                    <p class="text-sm">Để lại nhiều tác phẩm văn học có giá trị, thúc đẩy phát triển văn hóa dân tộc.</p>
+                                </li>
+                                <li>
+                                    <strong>Y tế công cộng:</strong>
+                                    <p class="text-sm">Xây dựng hệ thống y tế công cộng, chăm sóc sức khỏe nhân dân.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tác động quốc tế -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Tác Động Quốc Tế</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Phong trào giải phóng dân tộc</h4>
+                                <ul class="space-y-2">
+                                    <li>• Tư tưởng và phương pháp cách mạng của Người đã ảnh hưởng đến nhiều phong trào giải phóng dân tộc trên thế giới</li>
+                                    <li>• Các dân tộc bị áp bức học tập kinh nghiệm cách mạng Việt Nam</li>
+                                    <li>• Phương pháp đấu tranh "toàn dân, toàn diện" được nhiều nước áp dụng</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Quan hệ quốc tế</h4>
+                                <ul class="space-y-2">
+                                    <li>• Người đã xây dựng mối quan hệ hữu nghị với nhiều quốc gia và dân tộc trên thế giới</li>
+                                    <li>• Việt Nam trở thành điểm đến của nhiều nhà cách mạng quốc tế</li>
+                                    <li>• Tư tưởng đoàn kết quốc tế của Người có ảnh hưởng sâu rộng</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Các di sản chính -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Các Di Sản Chính</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Anh hùng giải phóng dân tộc -->
+                        <div class="bg-gradient-to-br from-red-500 to-red-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-1.003-.606-1.784-.606-2.95a1 1 0 00-1.349-.998z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Anh hùng giải phóng dân tộc</h4>
+                            <p class="text-sm leading-relaxed">
+                                Người đã lãnh đạo thành công sự nghiệp giải phóng dân tộc, chấm dứt ách đô hộ của thực dân, đế quốc,
+                                giành lại độc lập, tự do cho Tổ quốc.
+                            </p>
+                        </div>
+
+                        <!-- Tư tưởng cách mạng -->
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Tư tưởng cách mạng</h4>
+                            <p class="text-sm leading-relaxed">
+                                Tư tưởng Hồ Chí Minh là ngọn đuốc soi đường cho cách mạng Việt Nam,
+                                là kim chỉ nam cho hành động của Đảng và nhân dân ta.
+                            </p>
+                        </div>
+
+                        <!-- Đạo đức cách mạng -->
+                        <div class="bg-gradient-to-br from-green-500 to-green-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Tấm gương đạo đức</h4>
+                            <p class="text-sm leading-relaxed">
+                                Cuộc đời Người là một tấm gương sáng về đạo đức cách mạng,
+                                về sự giản dị, khiêm tốn và hết lòng vì dân vì nước.
+                            </p>
+                        </div>
+
+                        <!-- Văn học nghệ thuật -->
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Văn học nghệ thuật</h4>
+                            <p class="text-sm leading-relaxed">
+                                Người để lại nhiều tác phẩm văn học có giá trị,
+                                từ thơ ca đến văn chính luận, góp phần làm phong phú nền văn học Việt Nam.
+                            </p>
+                        </div>
+
+                        <!-- Phong cách lãnh đạo -->
+                        <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Phong cách lãnh đạo</h4>
+                            <p class="text-sm leading-relaxed">
+                                Phong cách lãnh đạo dân chủ, gần gũi với nhân dân,
+                                luôn đặt lợi ích của dân tộc lên trên hết.
+                            </p>
+                        </div>
+
+                        <!-- Tình cảm quốc tế -->
+                        <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 text-white p-6 rounded-lg card-hover">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Tình cảm quốc tế</h4>
+                            <p class="text-sm leading-relaxed">
+                                Người có tình cảm quốc tế sâu sắc,
+                                luôn ủng hộ các dân tộc bị áp bức trên thế giới.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Di sản văn học -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Di Sản Văn Học</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Thơ ca</h4>
+                                <ul class="space-y-3">
+                                    <li>
+                                        <strong>Nhật ký trong tù:</strong>
+                                        <p class="text-sm">Tập thơ nổi tiếng viết trong thời gian bị giam cầm tại nhà tù Quốc dân đảng Trung Quốc (1942-1943). Gồm 133 bài thơ chữ Hán, thể hiện tinh thần lạc quan, yêu đời và ý chí cách mạng kiên cường.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Thơ chúc Tết:</strong>
+                                        <p class="text-sm">Những bài thơ chúc Tết đầy tình cảm, gần gũi với nhân dân, thể hiện tình yêu thương và sự quan tâm đến đời sống của người dân.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Thơ về thiếu nhi:</strong>
+                                        <p class="text-sm">Những vần thơ yêu thương dành cho trẻ em, thể hiện tình cảm đặc biệt của Bác đối với thế hệ tương lai của đất nước.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Văn chính luận</h4>
+                                <ul class="space-y-3">
+                                    <li>
+                                        <strong>Tuyên ngôn Độc lập:</strong>
+                                        <p class="text-sm">Văn kiện lịch sử quan trọng, khai sinh ra nước Việt Nam Dân chủ Cộng hòa. Được đọc tại Quảng trường Ba Đình ngày 02/09/1945.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Đường Kách mệnh:</strong>
+                                        <p class="text-sm">Tác phẩm lý luận cách mạng quan trọng, được viết năm 1927 tại Quảng Châu. Là cẩm nang cách mạng cho cán bộ và đảng viên.</p>
+                                    </li>
+                                    <li>
+                                        <strong>Các bài viết khác:</strong>
+                                        <p class="text-sm">Nhiều bài viết về chính trị, xã hội, giáo dục, đạo đức cách mạng, được tập hợp trong nhiều tuyển tập.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ảnh hưởng quốc tế -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Ảnh Hưởng Quốc Tế</h3>
+                        <div class="space-y-4">
+                            <p><strong>Phong trào giải phóng dân tộc:</strong> Tư tưởng và phương pháp cách mạng của Người đã ảnh hưởng đến nhiều phong trào giải phóng dân tộc trên thế giới.</p>
+                            <p><strong>Quan hệ quốc tế:</strong> Người đã xây dựng mối quan hệ hữu nghị với nhiều quốc gia và dân tộc trên thế giới.</p>
+                            <p><strong>Di sản văn hóa:</strong> UNESCO đã công nhận Người là Danh nhân văn hóa thế giới, thể hiện sự đánh giá cao của cộng đồng quốc tế.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giá trị trường tồn -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Giá Trị Trường Tồn</h3>
+                        <div class="space-y-4">
+                            <p>Tư tưởng, đạo đức và phong cách của Chủ tịch Hồ Chí Minh vẫn là nền tảng tư tưởng và kim chỉ nam cho hành động của Đảng Cộng sản Việt Nam và nhân dân Việt Nam trong công cuộc đổi mới, xây dựng và bảo vệ Tổ quốc.</p>
+                            <p>Di sản của Người không chỉ có ý nghĩa với Việt Nam mà còn có giá trị quốc tế, góp phần vào sự nghiệp hòa bình, độc lập dân tộc, dân chủ và tiến bộ xã hội trên thế giới.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#c8102e] text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mt-4">
+                <a href="HCM.html" class="text-yellow-300 hover:text-yellow-200 transition-colors">← Về trang chủ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>// Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

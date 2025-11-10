@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat với AI - Trang về Chủ tịch Hồ Chí Minh</title>
+    <meta name="description" content="Chat với AI để tìm hiểu thêm về Chủ tịch Hồ Chí Minh">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 0 0'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Common CSS - Load trước để có styling ngay -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS - Load sau để override nếu cần -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Load scripts -->
+    <script src="config.js"></script>
+    <script src="common.js" defer></script>
+    <script src="chat.js" defer></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Chat specific styles */
+        #chat-messages {
+            min-height: 500px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 1.5rem;
+            background-color: #f9fafb;
+        }
+        
+        .chat-input-container {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        #chat-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        #send-button {
+            padding: 0.75rem 1.5rem;
+            background-color: #c8102e;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #send-button:hover {
+            background-color: #a00e26;
+        }
+        
+        #send-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .quick-question-btn {
+            padding: 0.75rem 1rem;
+            background-color: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.875rem;
+        }
+        
+        .quick-question-btn:hover {
+            background-color: #e5e7eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styles */
+        #header {
+            background-color: #c8102e;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-logo {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        #desktop-nav {
+            display: none;
+            gap: 2rem;
+        }
+
+        #desktop-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.125rem;
+            transition: color 0.3s;
+        }
+
+        #desktop-nav a:hover {
+            color: #fcd34d;
+        }
+
+        #desktop-nav a.active {
+            color: #fcd34d;
+            border-bottom: 2px solid #fcd34d;
+        }
+
+        #mobile-menu-button {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        #mobile-menu {
+            display: none;
+            padding: 1rem 1.5rem;
+        }
+
+        #mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            font-size: 1.125rem;
+            transition: background-color 0.3s;
+        }
+
+        #mobile-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.25rem;
+        }
+
+        #mobile-menu a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.25rem;
+        }
+
+        @media (min-width: 768px) {
+            #desktop-nav {
+                display: flex !important;
+            }
+            #mobile-menu-button {
+                display: none !important;
+            }
+            #mobile-menu {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #desktop-nav {
+                display: none !important;
+            }
+            #mobile-menu-button {
+                display: block !important;
+            }
+        }
+
+        /* Main content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .chat-container {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .chat-header {
+            background: linear-gradient(to right, #c8102e, #a00e26);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .chat-header h1 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .chat-header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .quick-questions-container {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .quick-questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content p {
+            font-size: 1.125rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Fix input placeholder text - đảm bảo hiển thị đầy đủ và responsive */
+        #chat-input {
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+        @media (max-width: 640px) {
+            #chat-input {
+                font-size: 14px;
+            }
+            #chat-input::placeholder {
+                font-size: 14px;
+            }
+        }
+
+        .chat-message {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .typing-indicator {
+            display: inline-block;
+        }
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #666;
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            30% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                Hồ Chí Minh
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <!-- Main Chat Area -->
+    <main class="main-content">
+        <div class="chat-container">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <h1>💬 Chat với AI về Chủ tịch Hồ Chí Minh</h1>
+                <p>Hỏi bất kỳ câu hỏi nào về cuộc đời, sự nghiệp và tư tưởng của Bác Hồ</p>
+            </div>
+
+            <!-- Chat Messages Container -->
+            <div id="chat-messages">
+                <!-- Welcome Message sẽ được thêm bằng JavaScript -->
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <input 
+                    type="text" 
+                    id="chat-input" 
+                    placeholder="Nhập câu hỏi về Chủ tịch Hồ Chí Minh..." 
+                >
+                <button type="button" id="send-button">Gửi</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>Trang thông tin về Chủ tịch Hồ Chí Minh.</p>
+            <p>Người thực hiện: Phạm Duy Phúc - MSV: 102171</p>
+            <p>TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM</p>
+        </div>
+    </footer>
+</body>
+</html>
+

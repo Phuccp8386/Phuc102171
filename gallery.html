@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Ảnh Chủ Tịch Hồ Chí Minh</title>
+    <meta name="description" content="Thư viện ảnh về cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh">
+    <meta name="keywords" content="Hồ Chí Minh, thư viện ảnh, hình ảnh, lịch sử">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 0 0'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/gallery/background.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                    Hồ Chí Minh
+                </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="text-yellow-300 border-b-2 border-yellow-300">Thư viện ảnh</a>
+                <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[50vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Thư Viện Ảnh</h1>
+                <p class="text-lg md:text-2xl italic">Những khoảnh khắc lịch sử về Chủ tịch Hồ Chí Minh</p>
+            </div>
+        </section>
+
+        <!-- Filter buttons -->
+        <section class="py-8 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button type="button" class="filter-btn active bg-[#c8102e] text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors" data-filter="all">
+                        Tất cả
+                    </button>
+                    <button type="button" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors" data-filter="biography">
+                        Tiểu sử
+                    </button>
+                    <button type="button" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors" data-filter="career">
+                        Sự nghiệp
+                    </button>
+                    <button type="button" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors" data-filter="speeches">
+                        Phát biểu
+                    </button>
+                    <button type="button" class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors" data-filter="daily">
+                        Đời thường
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+
+                    <!-- Tiểu sử -->
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="biography" onclick="openModal('assets/images/gallery/NAQ.jpg', 'Chủ tịch Hồ Chí Minh thời trẻ (Lúc sử dụng tên Nguyễn Ái Quốc ở Pháp năm 1920)')">
+                        <img src="assets/images/gallery/NAQ.jpg" alt="Chủ tịch Hồ Chí Minh thời trẻ" class="w-full h-44 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Chủ tịch Hồ Chí Minh thời trẻ</h4>
+                            <p class="text-xs text-gray-600">Thời kỳ tìm đường cứu nước</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="biography" onclick="openModal('assets/images/gallery/KimLien.jpg', 'Nơi Chủ tịch Hồ Chí Minh đã sống cùng gia đình (làng Sen, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An)')">
+                        <img src="assets/images/gallery/KimLien.jpg" alt="Nơi Chủ tịch Hồ Chí Minh đã sống cùng gia đình (làng Sen, xã Kim Liên, huyện Nam Đàn, tỉnh Nghệ An))" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Ngôi nhà quê nội </h4>
+                        </div>
+                    </div>
+
+                    <!-- Sự nghiệp -->
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="career" onclick="openModal('assets/images/gallery/TNDL.jpg', 'Tại Quảng trường Ba Đình, Người đọc Tuyên ngôn Độc lập, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.')">
+                        <img src="assets/images/gallery/TNDL.jpg" alt="Tuyên ngôn Độc lập 1945" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Tuyên ngôn Độc lập</h4>
+                            <p class="text-xs text-gray-600">02/09/1945 tại Quảng trường Ba Đình</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="career" onclick="openModal('assets/images/gallery/Dang.jpg', 'Năm 1930, Chủ tịch Hồ Chí Minh thành lập Đảng Cộng sản Việt Nam')">
+                        <img src="assets/images/gallery/Dang.jpg" alt="Thành lập Đảng" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Thành lập Đảng</h4>
+                            <p class="text-xs text-gray-600">03/02/1930 tại Hồng Kông</p>
+                        </div>
+                    </div>
+
+                    <!-- Phát biểu -->
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="speeches" onclick="openModal('assets/images/gallery/PhatBieu.jpg', ' Chủ tịch Hồ Chí Minh đọc báo cáo tại kỳ họp thứ III, Quốc hội khóa I nước Việt Nam Dân chủ Cộng hòa, thông qua Luật Cải cách ruộng đất (12/1953).')">
+                        <img src="assets/images/gallery/PhatBieu.jpg" alt="Phát biểu tại hội nghị" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Phát biểu tại kỳ họp thứ III, Quốc hội khóa I</h4>
+                            <p class="text-xs text-gray-600">Tháng 12/1953</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="speeches" onclick="openModal('assets/images/gallery/vietBac1953.jpg', 'Chủ tịch Hồ Chí Minh chủ trì phiên họp Hội đồng Chính phủ tại Việt Bắc (1953).')">
+                        <img src="assets/images/gallery/vietBac1953.jpg" alt="Họp với các đồng chí" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Họp hội đồng Chính phủ</h4>
+                            <p class="text-xs text-gray-600">1953</p>
+                        </div>
+                    </div>
+
+                    <!-- Đời thường -->
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="daily" onclick="openModal('assets/images/gallery/NhiDong.jpg', 'Các cháu thiếu nhi mừng sinh nhật Bác 70 tuổi, năm 1960, tại Phủ Chủ tịch.')">
+                        <img src="assets/images/gallery/NhiDong.jpg" alt="Bác Hồ với thiếu nhi" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Bác Hồ với thiếu nhi</h4>
+                            <p class="text-xs text-gray-600">1960</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="daily" onclick="openModal('assets/images/gallery/HCM3.jpg', ' Chủ tịch Hồ Chí Minh làm việc tại chiến khu Việt Bắc trong thời kỳ kháng chiến chống Pháp.')">
+                        <img src="assets/images/gallery/HCM3.jpg" alt="Bác Hồ làm việc trong thời kỳ kháng chiến" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Bác Hồ làm việc trong thời kỳ kháng chiến</h4>
+                            <p class="text-xs text-gray-600">Sự giản dị trong cuộc sống</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="daily" onclick="openModal('assets/images/gallery/NhanDan.jpg', ' Chủ tịch Hồ Chí Minh đến thăm nông dân tỉnh Bắc Kạn đang thu hoạch lúa mùa năm 1950.')">
+                        <img src="assets/images/gallery/NhanDan.jpg" alt="Bác Hồ với nhân dân" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Bác Hồ gần gũi với quần chúng nhân dân</h4>
+                            <p class="text-xs text-gray-600">1950</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="daily" onclick="openModal('assets/images/gallery/CDBienGioi.jpg', 'Chủ tịch Hồ Chí Minh họp với Ban Thường vụ Trung ương Đảng quyết định mở Chiến dịch Biên giới (1950).')">
+                        <img src="assets/images/gallery/CDBienGioi.jpg" alt="Bác Hồ trong kháng chiến" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Bác Hồ trong kháng chiến</h4>
+                            <p class="text-xs text-gray-600">Lãnh đạo kháng chiến (1950)</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="daily" onclick="openModal('assets/images/gallery/Phap.jpg', ' Chủ tịch Hồ Chí Minh gặp gỡ kiều bào trong chuyến thăm Pháp, năm 1946.')">
+                        <img src="assets/images/gallery/Phap.jpg" alt="Bác Hồ và đồng chí" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Bác Hồ và chuyến thăm đồng bào tại Pháp</h4>
+                            <p class="text-xs text-gray-600">1946</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer" data-category="daily" onclick="openModal('assets/images/gallery/HCM4.jpg', 'Bác Hồ vui múa hát với các cháu thiếu nhi tại vườn Phủ Chủ tịch nhân Ngày quốc tế Thiếu nhi 1/6/1960.')">
+                        <img src="assets/images/gallery/HCM4.jpg" alt="Di sản của Bác Hồ" class="w-full h-48 object-cover">
+                        <div class="p-3 bg-white">
+                            <h4 class="font-semibold text-sm">Bác Hồ vui múa hát với các cháu thiếu nhi</h4>
+                            <p class="text-xs text-gray-600">1/6/1960</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button type="button" onclick="closeModal()" class="absolute -top-10 right-0 text-white text-4xl hover:text-yellow-300 transition-colors" aria-label="Đóng ảnh">
+                X
+            </button>
+            <img id="modalImage" src="#" alt="Ảnh phóng to" class="max-w-full max-h-full rounded-lg shadow-2xl">
+            <p id="modalCaption" class="text-white text-center mt-4 text-lg"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#c8102e] text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mt-4">
+                <a href="HCM.html" class="text-yellow-300 hover:text-yellow-200 transition-colors">← Về trang chủ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>// Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-[#c8102e]', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-[#c8102e]', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+
+                const filter = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Image modal functions
+        function openModal(imageSrc, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+
+            modalImage.src = imageSrc;
+            modalCaption.textContent = caption;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

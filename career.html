@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự Nghiệp Chủ Tịch Hồ Chí Minh - Chi Tiết</title>
+    <meta name="description" content="Sự nghiệp cách mạng vĩ đại của Chủ tịch Hồ Chí Minh">
+    <meta name="keywords" content="Hồ Chí Minh, sự nghiệp, cách mạng, kháng chiến, lãnh đạo">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 0 0'><text y='.9em' font-size='90'>🇻🇳</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="common.js" defer></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Fix navigation duplicate */
+        header nav.hidden {
+            display: none !important;
+        }
+        @media (min-width: 768px) {
+            header nav.hidden {
+                display: flex !important;
+            }
+        }
+        @media (max-width: 767px) {
+            header nav.hidden {
+                display: none !important;
+            }
+        }
+        #mobile-menu {
+            display: none !important;
+        }
+        @media (max-width: 767px) {
+            #mobile-menu.hidden {
+                display: none !important;
+            }
+            #mobile-menu:not(.hidden) {
+                display: block !important;
+            }
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/career/HCM2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid #c8102e;
+            top: 0;
+            left: -0.625rem;
+            z-index: 10;
+        }
+        /* Fix navigation links font-weight - đảm bảo không bị in đậm khi mới load */
+        header nav a {
+            font-weight: normal !important;
+        }
+        
+        #mobile-menu a {
+            font-weight: normal !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#c8102e] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="HCM.html" class="text-xl md:text-2xl font-bold flex items-center">
+                Hồ Chí Minh
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+            </nav>            <button id="mobile-menu-button" type="button" class="md:hidden focus:outline-none" aria-label="Mở menu di động">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="HCM.html" class="block py-2 text-lg hover:bg-red-800 rounded">Trang chủ</a>
+            <a href="biography.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tiểu sử</a>
+            <a href="career.html" class="block py-2 text-lg hover:bg-red-800 rounded">Sự nghiệp</a>
+            <a href="ideology.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tư tưởng</a>
+            <a href="legacy.html" class="block py-2 text-lg hover:bg-red-800 rounded">Di sản</a>
+            <a href="quotes.html" class="block py-2 text-lg hover:bg-red-800 rounded">Câu nói</a>
+            <a href="gallery.html" class="block py-2 text-lg hover:bg-red-800 rounded">Thư viện ảnh</a>
+            <a href="documents.html" class="block py-2 text-lg hover:bg-red-800 rounded">Tài liệu</a>
+            <a href="chat.html" class="block py-2 text-lg hover:bg-red-800 rounded">Chat với AI</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white h-[50vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl leading-tight mb-4">Sự Nghiệp Cách Mạng</h1>
+                <p class="text-lg md:text-2xl italic">Hành trình vĩ đại của Vị Cha Già Dân Tộc</p>
+            </div>
+        </section>
+
+        <!-- Sự nghiệp chính -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl text-center mb-12 text-[#c8102e]">Sự Nghiệp Cách Mạng Vĩ Đại</h2>
+
+                <!-- Tìm đường cứu nước -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Tìm Đường Cứu Nước (1911-1941)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Cuộc hành trình 30 năm</h4>
+                                <p class="mb-4">Từ năm 1911 đến 1941, Người đã đi qua nhiều châu lục, tiếp xúc với các nền văn hóa khác nhau và học hỏi kinh nghiệm từ các cuộc cách mạng trên thế giới.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Các giai đoạn chính</h4>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li><strong>1911-1917:</strong> Hoạt động ở Pháp, làm nhiều nghề để kiếm sống và học hỏi</li>
+                                    <li><strong>1919:</strong> Gửi bản "Yêu sách của nhân dân An Nam" tại Hội nghị Versailles</li>
+                                    <li><strong>1920:</strong> Tham gia Đảng Cộng sản Pháp, bước ngoặt quan trọng</li>
+                                    <li><strong>1923-1924:</strong> Học tập tại Liên Xô, nghiên cứu chủ nghĩa Mác-Lênin</li>
+                                    <li><strong>1924-1927:</strong> Hoạt động ở Trung Quốc, thành lập Hội Việt Nam Cách mạng Thanh niên</li>
+                                    <li><strong>1930:</strong> Thành lập Đảng Cộng sản Việt Nam</li>
+                                </ul>
+
+                                <h4 class="text-lg font-semibold mb-4">Những bài học quan trọng</h4>
+                                <p class="mb-4">Người đã học được rằng chỉ có cách mạng vô sản mới có thể giải phóng các dân tộc bị áp bức, và cách mạng phải có Đảng lãnh đạo.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/career/Bennharong.webp" alt="Bến cảng Nhà Rồng" class="w-full h-64 object-cover rounded-lg">
+                                <p class="text-sm mt-2 italic">Bến cảng Nhà Rồng</p>
+
+                                <img src="assets/images/career/Map.jpg" alt="Bản đồ hành trình tìm đường cứu nước" class="w-full h-54 object-cover rounded-lg">
+                                <p class="text-sm mt-2 italic">Bản đồ hành trình tìm đường cứu nước</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lãnh đạo kháng chiến -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-8 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Lãnh Đạo Kháng Chiến (1945-1969)</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-4">Kháng chiến chống Pháp (1945-1954)</h4>
+                                <p class="mb-4">Lãnh đạo nhân dân Việt Nam tiến hành cuộc kháng chiến trường kỳ chống thực dân Pháp, kết thúc bằng chiến thắng Điện Biên Phủ năm 1954.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Các giai đoạn kháng chiến chống Pháp</h4>
+                                <ul class="list-disc list-inside space-y-2 mb-4">
+                                    <li><strong>1945-1946:</strong> Xây dựng chính quyền cách mạng, chuẩn bị kháng chiến</li>
+                                    <li><strong>1946-1950:</strong> Giai đoạn phòng ngự, xây dựng căn cứ địa</li>
+                                    <li><strong>1950-1954:</strong> Giai đoạn phản công, giành thắng lợi quyết định</li>
+                                </ul>
+
+                                <h4 class="text-lg font-semibold mb-4">Kháng chiến chống Mỹ (1954-1969)</h4>
+                                <p class="mb-4">Tiếp tục lãnh đạo cuộc kháng chiến chống đế quốc Mỹ, đấu tranh cho sự thống nhất đất nước.</p>
+
+                                <h4 class="text-lg font-semibold mb-4">Chiến lược kháng chiến</h4>
+                                <p class="mb-4">Người đề ra chiến lược "toàn dân, toàn diện, trường kỳ, tự lực cánh sinh", kết hợp đấu tranh chính trị với đấu tranh vũ trang.</p>
+                            </div>
+                            <div>
+                                <img src="assets/images/career/HCM2.jpg" alt="Lãnh đạo kháng chiến" class="w-full h-64 object-cover rounded-lg">
+                                <p class="text-sm mt-2 italic">Bộ chỉ huy Chiến dịch Điện Biên Phủ: Chủ tịch Hồ Chí Minh (giữa), Đại tướng, Tổng tư lệnh Võ Nguyên Giáp (ngoài cùng bên phải) và các đồng chí trong Bộ Chỉ huy chiến dịch.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xây dựng đất nước -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-8 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-6">Xây Dựng Đất Nước</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-white/10 p-6 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3">Chính trị</h4>
+                                <p class="mb-3">Xây dựng hệ thống chính trị dân chủ, đặt nền móng cho Nhà nước của dân, do dân, vì dân.</p>
+                                <ul class="list-disc list-inside text-sm space-y-1">
+                                    <li>Thành lập Quốc hội và Chính phủ</li>
+                                    <li>Xây dựng hệ thống pháp luật</li>
+                                    <li>Phát triển các tổ chức quần chúng</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/10 p-6 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3">Kinh tế</h4>
+                                <p class="mb-3">Phát triển kinh tế quốc dân, xây dựng nền kinh tế độc lập, tự chủ.</p>
+                                <ul class="list-disc list-inside text-sm space-y-1">
+                                    <li>Cải cách ruộng đất</li>
+                                    <li>Phát triển công nghiệp</li>
+                                    <li>Xây dựng cơ sở hạ tầng</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/10 p-6 rounded-lg">
+                                <h4 class="text-lg font-semibold mb-3">Văn hóa - Xã hội</h4>
+                                <p class="mb-3">Phát triển văn hóa dân tộc, giáo dục, y tế và các lĩnh vực xã hội khác.</p>
+                                <ul class="list-disc list-inside text-sm space-y-1">
+                                    <li>Xóa nạn mù chữ</li>
+                                    <li>Phát triển giáo dục</li>
+                                    <li>Cải thiện y tế</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Các giai đoạn quan trọng -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Các Giai Đoạn Quan Trọng</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Giai đoạn 1911-1920 -->
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-lg">
+                            <h4 class="text-lg font-bold mb-3">1911-1920: Khởi đầu cách mạng</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>• Ra đi tìm đường cứu nước từ Bến cảng Nhà Rồng</li>
+                                <li>• Hoạt động ở Pháp, làm nhiều nghề</li>
+                                <li>• Gửi bản "Yêu sách của nhân dân An Nam"</li>
+                                <li>• Tham gia Đảng Cộng sản Pháp</li>
+                            </ul>
+                        </div>
+
+                        <!-- Giai đoạn 1920-1930 -->
+                        <div class="bg-gradient-to-br from-green-500 to-green-700 text-white p-6 rounded-lg">
+                            <h4 class="text-lg font-bold mb-3">1920-1930: Học tập và chuẩn bị</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>• Học tập tại Liên Xô</li>
+                                <li>• Hoạt động ở Trung Quốc</li>
+                                <li>• Thành lập Hội Việt Nam Cách mạng Thanh niên</li>
+                                <li>• Viết tác phẩm "Đường Kách mệnh"</li>
+                            </ul>
+                        </div>
+
+                        <!-- Giai đoạn 1930-1945 -->
+                        <div class="bg-gradient-to-br from-red-500 to-red-700 text-white p-6 rounded-lg">
+                            <h4 class="text-lg font-bold mb-3">1930-1945: Thành lập Đảng và chuẩn bị cách mạng</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>• Thành lập Đảng Cộng sản Việt Nam</li>
+                                <li>• Lãnh đạo phong trào cách mạng</li>
+                                <li>• Chuẩn bị cho Cách mạng Tháng Tám</li>
+                                <li>• Đọc Tuyên ngôn Độc lập</li>
+                            </ul>
+                        </div>
+
+                        <!-- Giai đoạn 1945-1954 -->
+                        <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-6 rounded-lg">
+                            <h4 class="text-lg font-bold mb-3">1945-1954: Kháng chiến chống Pháp</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>• Xây dựng chính quyền cách mạng</li>
+                                <li>• Lãnh đạo kháng chiến trường kỳ</li>
+                                <li>• Chiến thắng Điện Biên Phủ</li>
+                                <li>• Giành độc lập hoàn toàn</li>
+                            </ul>
+                        </div>
+
+                        <!-- Giai đoạn 1954-1969 -->
+                        <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white p-6 rounded-lg">
+                            <h4 class="text-lg font-bold mb-3">1954-1969: Xây dựng đất nước</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>• Xây dựng chế độ mới</li>
+                                <li>• Phát triển kinh tế, văn hóa</li>
+                                <li>• Kháng chiến chống Mỹ</li>
+                                <li>• Đấu tranh thống nhất đất nước</li>
+                            </ul>
+                        </div>
+
+                        <!-- Di sản -->
+                        <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 text-white p-6 rounded-lg">
+                            <h4 class="text-lg font-bold mb-3">Di sản để lại</h4>
+                            <ul class="text-sm space-y-2">
+                                <li>• Tư tưởng Hồ Chí Minh</li>
+                                <li>• Đạo đức cách mạng</li>
+                                <li>• Văn học nghệ thuật</li>
+                                <li>• Tấm gương sáng ngời</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thành tựu và đóng góp -->
+                <div class="max-w-6xl mx-auto mb-16">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Thành Tựu Và Đóng Góp</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+
+                        <!-- Thành tựu chính trị -->
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu chính trị</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Giải phóng dân tộc:</strong>
+                                    <p class="text-sm">Lãnh đạo thành công sự nghiệp giải phóng dân tộc, chấm dứt ách đô hộ của thực dân, đế quốc.</p>
+                                </li>
+                                <li>
+                                    <strong>Thành lập nhà nước:</strong>
+                                    <p class="text-sm">Khai sinh ra nước Việt Nam Dân chủ Cộng hòa, đặt nền móng cho nhà nước độc lập.</p>
+                                </li>
+                                <li>
+                                    <strong>Xây dựng Đảng:</strong>
+                                    <p class="text-sm">Thành lập và lãnh đạo Đảng Cộng sản Việt Nam, đảm bảo sự lãnh đạo của Đảng.</p>
+                                </li>
+                                <li>
+                                    <strong>Đoàn kết dân tộc:</strong>
+                                    <p class="text-sm">Xây dựng khối đại đoàn kết toàn dân tộc, tập hợp mọi lực lượng yêu nước.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Thành tựu quân sự -->
+                        <div class="bg-gradient-to-r from-red-600 to-red-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu quân sự</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Chiến thắng Điện Biên Phủ:</strong>
+                                    <p class="text-sm">Lãnh đạo chiến thắng Điện Biên Phủ năm 1954, đánh dấu sự kết thúc của chủ nghĩa thực dân cũ.</p>
+                                </li>
+                                <li>
+                                    <strong>Chiến lược kháng chiến:</strong>
+                                    <p class="text-sm">Đề ra chiến lược "toàn dân, toàn diện, trường kỳ, tự lực cánh sinh".</p>
+                                </li>
+                                <li>
+                                    <strong>Xây dựng quân đội:</strong>
+                                    <p class="text-sm">Xây dựng Quân đội Nhân dân Việt Nam với tinh thần "quân đội của dân, do dân, vì dân".</p>
+                                </li>
+                                <li>
+                                    <strong>Nghệ thuật quân sự:</strong>
+                                    <p class="text-sm">Phát triển nghệ thuật quân sự Việt Nam, kết hợp đấu tranh chính trị với đấu tranh vũ trang.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Thành tựu kinh tế -->
+                        <div class="bg-gradient-to-r from-green-600 to-green-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu kinh tế</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Cải cách ruộng đất:</strong>
+                                    <p class="text-sm">Thực hiện cải cách ruộng đất, giải phóng nông dân khỏi ách áp bức phong kiến.</p>
+                                </li>
+                                <li>
+                                    <strong>Phát triển công nghiệp:</strong>
+                                    <p class="text-sm">Xây dựng nền công nghiệp quốc dân, phát triển các ngành kinh tế chủ chốt.</p>
+                                </li>
+                                <li>
+                                    <strong>Cơ sở hạ tầng:</strong>
+                                    <p class="text-sm">Xây dựng hệ thống giao thông, thủy lợi, điện lực phục vụ phát triển kinh tế.</p>
+                                </li>
+                                <li>
+                                    <strong>Kinh tế tự chủ:</strong>
+                                    <p class="text-sm">Xây dựng nền kinh tế độc lập, tự chủ, không phụ thuộc vào nước ngoài.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Thành tựu văn hóa -->
+                        <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-6 rounded-lg">
+                            <h4 class="text-xl font-bold mb-4">Thành tựu văn hóa</h4>
+                            <ul class="space-y-3">
+                                <li>
+                                    <strong>Xóa nạn mù chữ:</strong>
+                                    <p class="text-sm">Phát động phong trào "Bình dân học vụ", xóa nạn mù chữ cho hàng triệu người.</p>
+                                </li>
+                                <li>
+                                    <strong>Phát triển giáo dục:</strong>
+                                    <p class="text-sm">Xây dựng hệ thống giáo dục từ mầm non đến đại học, đào tạo nhân tài.</p>
+                                </li>
+                                <li>
+                                    <strong>Văn học nghệ thuật:</strong>
+                                    <p class="text-sm">Để lại nhiều tác phẩm văn học có giá trị, thúc đẩy phát triển văn hóa dân tộc.</p>
+                                </li>
+                                <li>
+                                    <strong>Y tế công cộng:</strong>
+                                    <p class="text-sm">Xây dựng hệ thống y tế công cộng, chăm sóc sức khỏe nhân dân.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline sự nghiệp -->
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-[#c8102e]">Timeline Sự Nghiệp</h3>
+                    <div class="relative">
+                        <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gray-200 hidden md:block"></div>
+
+                        <!-- Timeline Item 1 -->
+                        <div class="md:grid md:grid-cols-2 md:gap-8 mb-8">
+                            <div class="text-right md:pr-8">
+                                <h4 class="text-xl font-bold text-[#c8102e]">1911-1941</h4>
+                                <p class="text-gray-600">Tìm đường cứu nước</p>
+                            </div>
+                            <div class="relative md:pl-8">
+                                <div class="timeline-item absolute left-1/2 -translate-x-1/2 md:left-0"></div>
+                                <div class="p-4 rounded-lg bg-gray-50">
+                                    <p>Cuộc hành trình 30 năm qua nhiều quốc gia để tìm con đường giải phóng dân tộc.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 2 -->
+                        <div class="md:grid md:grid-cols-2 md:gap-8 mb-8">
+                            <div class="text-left md:pl-8 md:order-2">
+                                <h4 class="text-xl font-bold text-[#c8102e]">1930</h4>
+                                <p class="text-gray-600">Thành lập Đảng</p>
+                            </div>
+                            <div class="relative md:pr-8 md:text-right md:order-1">
+                                <div class="timeline-item absolute left-1/2 -translate-x-1/2 md:right-0 md:left-auto"></div>
+                                <div class="p-4 rounded-lg bg-gray-50">
+                                    <p>Chủ trì Hội nghị hợp nhất các tổ chức cộng sản, thành lập Đảng Cộng sản Việt Nam.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 3 -->
+                        <div class="md:grid md:grid-cols-2 md:gap-8 mb-8">
+                            <div class="text-right md:pr-8">
+                                <h4 class="text-xl font-bold text-[#c8102e]">1945</h4>
+                                <p class="text-gray-600">Đọc Tuyên ngôn Độc lập</p>
+                            </div>
+                            <div class="relative md:pl-8">
+                                <div class="timeline-item absolute left-1/2 -translate-x-1/2 md:left-0"></div>
+                                <div class="p-4 rounded-lg bg-gray-50">
+                                    <p>Tại Quảng trường Ba Đình, Người đọc Tuyên ngôn Độc lập, khai sinh ra nước Việt Nam Dân chủ Cộng hòa.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item 4 -->
+                        <div class="md:grid md:grid-cols-2 md:gap-8 mb-8">
+                            <div class="text-left md:pl-8 md:order-2">
+                                <h4 class="text-xl font-bold text-[#c8102e]">1945-1969</h4>
+                                <p class="text-gray-600">Lãnh đạo đất nước</p>
+                            </div>
+                            <div class="relative md:pr-8 md:text-right md:order-1">
+                                <div class="timeline-item absolute left-1/2 -translate-x-1/2 md:right-0 md:left-auto"></div>
+                                <div class="p-4 rounded-lg bg-gray-50">
+                                    <p>Lãnh đạo nhân dân Việt Nam trong hai cuộc kháng chiến và xây dựng đất nước.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#c8102e] text-white py-10 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">Trang thông tin về Chủ tịch Hồ Chí Minh.</p>
+            <p class="mt-2 text-lg">Người thực hiện: Phạm Duy Phúc - MSV: 102171</p>
+            <p class="mt-2 text-lg">TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM</p>
+        </div>
+    </footer>
+</body>
+</html>

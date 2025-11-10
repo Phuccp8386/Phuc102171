@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu Nói Nổi Tiếng - Chủ tịch Hồ Chí Minh</title>
+    <meta name="description" content="Tuyển tập những câu nói nổi tiếng và ý nghĩa của Chủ tịch Hồ Chí Minh">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="HCM.html" class="flex items-center text-2xl font-bold">
+                    Hồ Chí Minh
+                </a>
+
+                <nav class="hidden md:flex space-x-8 text-lg">
+                    <a href="HCM.html" class="hover:text-yellow-300 transition-colors duration-300">Trang chủ</a>
+                    <a href="biography.html" class="hover:text-yellow-300 transition-colors duration-300">Tiểu sử</a>
+                    <a href="career.html" class="hover:text-yellow-300 transition-colors duration-300">Sự nghiệp</a>
+                    <a href="ideology.html" class="hover:text-yellow-300 transition-colors duration-300">Tư tưởng</a>
+                    <a href="legacy.html" class="hover:text-yellow-300 transition-colors duration-300">Di sản</a>
+                    <a href="quotes.html" class="hover:text-yellow-300 transition-colors duration-300">Câu nói</a>
+                    <a href="gallery.html" class="hover:text-yellow-300 transition-colors duration-300">Thư viện ảnh</a>
+                    <a href="documents.html" class="hover:text-yellow-300 transition-colors duration-300">Tài liệu</a>
+                    <a href="chat.html" class="hover:text-yellow-300 transition-colors duration-300">Chat với AI</a>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">Câu Nói Nổi Tiếng</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeInUp delay-200">Những lời vàng ngọc của Chủ tịch Hồ Chí Minh</p>
+
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto animate-fadeInUp delay-400">
+                <div class="relative">
+                    <input type="text" id="search-quotes" placeholder="Tìm kiếm câu nói..."
+                           class="w-full px-6 py-4 text-lg rounded-lg bg-white/20 text-white placeholder-white/70 focus:outline-none focus:bg-white/30 transition-colors">
+                    <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button type="button" class="filter-btn active px-6 py-2 rounded-full bg-[#c8102e] text-white transition-colors duration-300" data-category="all">
+                    Tất cả
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-300" data-category="patriotism">
+                    Yêu nước
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-300" data-category="unity">
+                    Đoàn kết
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-300" data-category="education">
+                    Giáo dục
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-300" data-category="morality">
+                    Đạo đức
+                </button>
+                <button type="button" class="filter-btn px-6 py-2 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-300" data-category="revolution">
+                    Cách mạng
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <main class="py-16">
+        <div class="container mx-auto px-6">
+            <div id="quotes-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Quotes will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#c8102e] to-[#a00e26] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">Chủ tịch Hồ Chí Minh</h3>
+            <p class="text-lg mb-2">Vị Cha Già Dân Tộc Việt Nam</p>
+            <p class="text-yellow-200">Kính tặng Vị Cha Già Dân Tộc.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Quotes data
+        const quotes = [
+            {
+                text: "Không có gì quý hơn độc lập, tự do",
+                context: "Trong cuộc kháng chiến chống Mỹ",
+                category: "patriotism",
+                year: "1966"
+            },
+            {
+                text: "Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công",
+                context: "Về tầm quan trọng của đoàn kết",
+                category: "unity",
+                year: "1960"
+            },
+            {
+                text: "Vì lợi ích mười năm thì phải trồng cây, vì lợi ích trăm năm thì phải trồng người",
+                context: "Về giáo dục và đào tạo",
+                category: "education",
+                year: "1962"
+            },
+            {
+                text: "Cần, Kiệm, Liêm, Chính, Chí công vô tư",
+                context: "Về đạo đức cách mạng",
+                category: "morality",
+                year: "1947"
+            },
+            {
+                text: "Muốn cứu nước và giải phóng dân tộc, không có con đường nào khác ngoài con đường cách mạng vô sản",
+                context: "Về con đường cách mạng",
+                category: "revolution",
+                year: "1920"
+            },
+            {
+                text: "Tất cả mọi người đều sinh ra có quyền bình đẳng",
+                context: "Tuyên ngôn Độc lập",
+                category: "patriotism",
+                year: "1945"
+            },
+            {
+                text: "Nhà nước của dân, do dân, vì dân",
+                context: "Về bản chất nhà nước",
+                category: "patriotism",
+                year: "1945"
+            },
+            {
+                text: "Đạo đức là gốc của người cách mạng",
+                context: "Về đạo đức cách mạng",
+                category: "morality",
+                year: "1958"
+            },
+            {
+                text: "Học tập là một việc suốt đời",
+                context: "Về học tập",
+                category: "education",
+                year: "1962"
+            },
+            {
+                text: "Đoàn kết là sức mạnh, là then chốt của thành công",
+                context: "Về đoàn kết",
+                category: "unity",
+                year: "1960"
+            },
+            {
+                text: "Cách mạng là sự nghiệp của quần chúng",
+                context: "Về cách mạng",
+                category: "revolution",
+                year: "1945"
+            },
+            {
+                text: "Phải giữ gìn đạo đức cách mạng, khiêm tốn, giản dị",
+                context: "Về đạo đức",
+                category: "morality",
+                year: "1965"
+            }
+        ];
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const quotesContainer = document.getElementById('quotes-container');
+        const searchInput = document.getElementById('search-quotes');
+
+        function renderQuotes(filteredQuotes = quotes) {
+            quotesContainer.innerHTML = '';
+
+            filteredQuotes.forEach((quote, index) => {
+                const quoteCard = document.createElement('div');
+                quoteCard.className = 'quote-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-[#c8102e] animate-fadeInUp';
+                quoteCard.style.animationDelay = `${index * 0.1}s`;
+
+                quoteCard.innerHTML = `
+                    <div class="mb-4">
+                        <blockquote class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">
+                            "${quote.text}"
+                        </blockquote>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                            ${quote.context}
+                        </p>
+                        <p class="text-xs text-[#c8102e] font-semibold">
+                            ${quote.year}
+                        </p>
+                    </div>
+                `;
+
+                quotesContainer.appendChild(quoteCard);
+            });
+        }
+
+        // Filter by category
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-[#c8102e]', 'text-white');
+                    btn.classList.add('bg-gray-200', 'dark:bg-gray-600', 'text-gray-700', 'dark:text-gray-300');
+                });
+
+                button.classList.add('active', 'bg-[#c8102e]', 'text-white');
+                button.classList.remove('bg-gray-200', 'dark:bg-gray-600', 'text-gray-700', 'dark:text-gray-300');
+
+                const category = button.dataset.category;
+                let filteredQuotes = quotes;
+
+                if (category !== 'all') {
+                    filteredQuotes = quotes.filter(quote => quote.category === category);
+                }
+
+                // Apply search filter if there's a search term
+                const searchTerm = searchInput.value.toLowerCase();
+                if (searchTerm) {
+                    filteredQuotes = filteredQuotes.filter(quote =>
+                        quote.text.toLowerCase().includes(searchTerm) ||
+                        quote.context.toLowerCase().includes(searchTerm)
+                    );
+                }
+
+                renderQuotes(filteredQuotes);
+            });
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+
+            let filteredQuotes = quotes;
+
+            if (activeCategory !== 'all') {
+                filteredQuotes = quotes.filter(quote => quote.category === activeCategory);
+            }
+
+            if (searchTerm) {
+                filteredQuotes = filteredQuotes.filter(quote =>
+                    quote.text.toLowerCase().includes(searchTerm) ||
+                    quote.context.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            renderQuotes(filteredQuotes);
+        });
+
+        // Initial render
+        renderQuotes();
+    </script>
+</body>
+</html>
